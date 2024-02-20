@@ -1,4 +1,3 @@
-// Home.jsx
 import React from 'react';
 import { LivreProvider, useLivreContext } from "../livresContext/livreContext.jsx";
 
@@ -17,7 +16,7 @@ const Home = () => {
         <div>
             <h1>Liste des Livres</h1>
             {livres.map((livre) => (
-                <div key={livre.id}>
+                <div key={livre.id} style={{ backgroundColor: livre.stock === 0 ? 'gray' : 'lightblue' }}>
                     <p>{livre.titre}</p>
                     <p>Stock: {livre.stock}</p>
                     <button onClick={() => handleAdd(livre.id)}>+</button>

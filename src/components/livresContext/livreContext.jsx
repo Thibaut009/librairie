@@ -12,6 +12,8 @@ const livresReducer = (state, action) => {
             return state.map((livre) =>
                 livre.id === action.payload ? { ...livre, stock: Math.max(0, livre.stock - 1) } : livre
             );
+        case 'AJOUTER_LIVRE':
+            return [...state, { id: state.length + 1, ...action.payload, stock: parseInt(action.payload.stock, 10) }];
         default:
             return state;
     }
