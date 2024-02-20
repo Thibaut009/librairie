@@ -31,7 +31,7 @@ QUESTIONS PRATIQUES /5 POINTS :
    lui transmettant le slug du post à afficher en paramètre
 
 ```bash
-
+<Route path="/post/:slug" component={Post}></Route>
 ```
 
 2. Vous utilisez useReducer dans votre projet. Dans le code JSX, quel code permet d’afficher un bouton qui, lorsque
